@@ -15,7 +15,7 @@
   },
   "remoteEnv": {
     "KAGGLE_USERNAME": "${localEnv:KAGGLE_USERNAME}",
-    "KAGGLE_KEY": "${localEnv:KAGGLE_KEY}"
+    "KAGGLE_API_TOKEN": "${localEnv:KAGGLE_API_TOKEN}"
   },
   "postCreateCommand": "bash scripts/setup_data.sh"
 }
