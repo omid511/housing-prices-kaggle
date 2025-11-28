@@ -1,0 +1,21 @@
+{
+  "name": "Kaggle Data Science",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "charliermarsh.ruff"
+      ]
+    }
+  },
+  "remoteEnv": {
+    "KAGGLE_USERNAME": "${localEnv:KAGGLE_USERNAME}",
+    "KAGGLE_KEY": "${localEnv:KAGGLE_KEY}"
+  },
+  "postCreateCommand": "bash scripts/setup_data.sh"
+}
