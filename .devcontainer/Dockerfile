@@ -8,7 +8,7 @@ COPY pyproject.toml uv.lock /tmp/
 
 # Install dependencies
 # We use --system to install into the system python environment since this is a container
-RUN cd /tmp && uv sync --frozen --system
+RUN cd /tmp && uv pip install -r pyproject.toml --system
 
 # Clean up
 RUN rm /tmp/pyproject.toml /tmp/uv.lock
